@@ -31,5 +31,5 @@ This tool is useful for understanding poker hand strength, calculating equity in
 Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/poker-hand-simulator.git
+git clone https://github.com/abehm815/Poker-Hand-Simulator.git
 cd poker-hand-simulator
