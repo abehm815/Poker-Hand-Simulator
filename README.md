@@ -33,6 +33,7 @@ Clone this repository:
 ```bash
 git clone https://github.com/abehm815/Poker-Hand-Simulator.git
 cd poker-hand-simulator
+```
 
 ## Usage
 
