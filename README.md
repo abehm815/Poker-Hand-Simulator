@@ -31,8 +31,14 @@ This tool is useful for understanding poker hand strength, calculating equity in
 Clone this repository:
 
 ```bash
-git clone https://github.com/abehm815/Poker-Hand-Simulator.git
+git clone https://github.com/your-username/poker-hand-simulator.git
 cd poker-hand-simulator
+```
+
+Run the example usage script:
+
+```bash
+python example_usage.py
 ```
 
 ## Usage
@@ -116,53 +122,73 @@ print("Equity:", sim.wins / sim.numSims)
 
 ## Full Example Output
 
-The `example_usage.py` file demonstrates usage with many hand types and simulation cases.
+The `example_usage.py` file demonstrates usage with various hand types and simulation scenarios.
 
-### Hand Identification Output Example
-
-```
-Two Pair Example
-------------------------------
-Main Hand: [[AS], [AC], [KC], [KD], [TC]]
-Hand Type: TWO_PAIR
-```
-
-### Simulation Output Example
+### Hand Identification Output
 
 ```
-Case 1: 6 Opponents, All Community Cards Unknown
---------------------------------------------------
+Hand Identifier Usage
+__________________________________________________
+[[QS], [QC], [KD], [TC], [6H]]
+HandType.PAIR
+
+[[AS], [AC], [KC], [KD], [TC]]
+HandType.TWO_PAIR
+
+[[7S], [7H], [7C], [AS], [KH]]
+HandType.THREE_OF_A_KIND
+
+[[8S], [8H], [8H], [8C], [AS]]
+HandType.FOUR_OF_A_KIND
+
+[[KS], [KS], [KC], [JC], [JH]]
+HandType.FULL_HOUSE
+
+[[8H], [7C], [6H], [5S], [4S]]
+HandType.STRAIGHT
+
+[[AH], [KH], [JH], [TH], [7H]]
+HandType.FLUSH
+
+[[5H], [4H], [3H], [2H], [AH]]
+HandType.STRAIGHT_FLUSH
+
+[[AH], [KH], [QH], [JH], [TH]]
+HandType.ROYAL_FLUSH
+```
+
+### Simulation Output
+
+```
+Simulation Usage
+__________________________________________________
+
+Case 1: 6 opponents, all unknown community cards
+______________________________
 Player's Hand: [[AS], [AH]]
 Opponents: 6
-Equity: 0.6421
-```
+equity: 0.433
 
-```
-Case 2: 3 Opponents, All Community Cards Known
---------------------------------------------------
+Case 2: 3 opponents, all community cards known
+______________________________
 Player's Hand: [[AS], [AH]]
 Community Cards: [[AD], [AC], [TC], [7S], [4H]]
 Opponents: 3
-Equity: 1.0000
-```
+equity: 1.0
 
-```
-Case 3: 9 Opponents, Only Flop Known
---------------------------------------------------
+Case 3: 9 Opponents, only three community cards known (Flop)
+______________________________
 Player's Hand: [[TS], [TC]]
 Community Cards: [[AD], [AC], [9C]]
 Opponents: 9
-Equity: 0.2940
-```
+equity: 0.257
 
-```
-Case 4: 5 Opponents, 2 Known Opponent Hands, 4 Community Cards Known
---------------------------------------------------
+Case 4: 5 opponents, two opponents hands are known, 4 community cards are known
+______________________________
 Player's Hand: [[TS], [TC]]
 Community Cards: [[AD], [AC], [9C], [3S]]
-Known Opponent Hands: [[AS, KC], [JH, 2D]]
-Opponents: 5
-Equity: 0.5650
+Opponents: 9
+equity: 0.048
 ```
 
 ## Customization
@@ -174,6 +200,10 @@ This engine can be extended or modified to support:
 - Visualizing hand strengths and equity curves
 - Building bots or training AI poker agents
 - Integration into online poker apps or games
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
 
 ## Author
 
