@@ -31,14 +31,14 @@ This tool is useful for understanding poker hand strength, calculating equity in
 Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/poker-hand-simulator.git
-cd poker-hand-simulator
+git clone https://github.com/abehm815/Poker-Hand-Simulator.git
+cd Poker-Hand-Simulator
 ```
 
 Run the example usage script:
 
 ```bash
-python example_usage.py
+python ExampleUsage.py
 ```
 
 ## Usage
@@ -77,6 +77,7 @@ from Card import Card
 playerHand = [Card("AS"), Card("AH")]
 sim = Simulation(playerHand=playerHand, numOpps=5)
 
+#Runs 10000 simulated games
 for _ in range(10000):
     sim.runSim()
 
@@ -114,6 +115,7 @@ sim = Simulation(
     numOpps=5
 )
 
+#Runs 10000 simulated games
 for _ in range(10000):
     sim.runSim()
 
@@ -122,7 +124,7 @@ print("Equity:", sim.wins / sim.numSims)
 
 ## Full Example Output
 
-The `example_usage.py` file demonstrates usage with various hand types and simulation scenarios.
+The `ExampleUsage.py` file demonstrates usage with various hand types and simulation scenarios.
 
 ### Hand Identification Output
 
@@ -200,10 +202,6 @@ This engine can be extended or modified to support:
 - Visualizing hand strengths and equity curves
 - Building bots or training AI poker agents
 - Integration into online poker apps or games
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
 ## Author
 
